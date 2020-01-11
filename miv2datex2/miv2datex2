@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+import sys
+import xml.etree.ElementTree as ET
+import xml.dom.minidom
+
+from miv2datex2.parse_location_table import LocationTable
+from miv2datex2.parse_measurements import MeasurementPublication
+
+if __name__ == '__main__':
+    try:
+        source = sys.argv[1].read()
+    except IndexError:
+        source = sys.stdin.read()
+    try:
+        root = ET.fromstring(source)
+    except (FileNotFoundError, PermissionError) as e:
+        raise e
+    if root.tag == 'mivconfig':
+        parsing_class = LocationTable
+    elif root.tag == 'miv':
+        parsing_class = MeasurementPublication
+    else:
+        raise Exception('Input file type doesn\'t accord to the miv XML format')
+
+    output_xml = parsing_class.fromXmlString(source)
+    xmlstring = ET.tostring(output_xml.toDatexXml(), encoding="unicode")
+    xml_p = xml.dom.minidom.parseString(xmlstring)
+    pretty_xml = xml_p.toprettyxml()
+    sys.stdout.write(pretty_xml)
