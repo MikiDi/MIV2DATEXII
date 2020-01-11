@@ -1,7 +1,7 @@
 ## MIV2DATEXII
 
-:slightly_smiling_face: Live traffic flow data of Flanders is published as open data  
-:worried: Published in a custom XML format  
+:slightly_smiling_face: Live traffic-flow data of Flanders' highways is published as open data  
+:worried: It is published in a custom XML format  
 :tada: MIV2DATEXII
 
 This library provides a Python API as well as a command line interface to convert MIV publications to the European DATEXII standard for publication of traffic related data.
