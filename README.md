@@ -4,7 +4,7 @@
 :worried: It is published in a custom XML format  
 :tada: MIV2DATEXII
 
-This library provides a Python API as well as a command line interface to convert MIV publications to the European DATEXII standard for publication of traffic related data.
+This library provides a Python API as well as a command line interface to convert MIV publications to the European DATEX II standard for publication of traffic related data.
 
 #### Meten-in-Vlaanderen (MIV)
 
@@ -14,8 +14,8 @@ For more info:
 - [verkeerscentrum.be](https://www.verkeerscentrum.be/data)
 - [data.gov.be](https://data.gov.be/en/node/58556)
 
-#### DATEXII
-[The official DATEX2 website](https://datex2.eu/datex2/about)
+#### DATEX II
+[The official DATEX II website](https://datex2.eu/datex2/about)
 
 ### Requirements
 - \>= Python 3.7
